@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run \
+	-i \
+	--rm \
+	--name terraform \
+	-v "$PWD":/var/www -w \
+	/var/www hashicorp/terraform:light \
+	$@
+
